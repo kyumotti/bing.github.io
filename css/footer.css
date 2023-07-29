@@ -1,0 +1,231 @@
+/* pc */
+@media (min-width:1025px) {
+#footer > div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#footer > div > ul >li{display: inline-block;
+                    margin-right: 25px;}
+#footer > div > ul a{color: #bdbdbd;}
+#footer >address{color:#bdbdbd;font-size: 17px;padding: 30px 0 165px;}
+#footer >address > span{
+  line-height: 1.6;
+}
+#footer > p.copyright{color: #c0c0c0;letter-spacing: normal;}
+#footer > ul.sns{
+  display: flex;
+  position: absolute;
+  right: 131px;
+  bottom: 30px;
+}
+#footer > ul.sns > li{
+  margin-left: 10px;
+}
+#footer > ul.sns > li > a{
+  display: block;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  box-shadow: 0px 4px 8px 1px rgba(0, 0, 0, 0.36), inset 0px 4px 10.8px 2.2px rgba(73, 73, 73, 0.11);
+  background-color: #1b1b1b;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+#footer > ul.sns > li:first-child > a {
+  background: url(../images/footer_sns04.png) no-repeat center center;
+}
+#footer > ul.sns > li:nth-child(2) > a {background: url(../images/footer_sns03.png) no-repeat center center;}
+#footer > ul.sns > li:nth-child(3) > a {background: url(../images/footer_sns02.png) no-repeat center center;}
+#footer > ul.sns > li:nth-child(4) > a {background: url(../images/footer_sns01.png) no-repeat center center;}
+
+/* top 버튼 */
+div.btn_bot{
+  position: fixed;
+  bottom: 58px;
+  right: 30px;
+}
+a.aside_btn{
+  display: block;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 55px;
+  font-weight: 500;
+  letter-spacing: normal;
+}
+a.shop{
+  background-color: #fff;
+  box-shadow: 0px 3px 8px 1px rgba(0, 0, 0, 0.06), inset 0px 5px 10px 0 rgba(255, 255, 255, 0.14);
+  margin-bottom: 5px;
+}
+a.top{
+  background: #000 url(../images/fix_arrow.png) no-repeat center center;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+a.top.on{
+  transform: rotateZ(180deg);
+}
+
+}
+
+/* tablet */
+@media (min-width:769px) and (max-width:1024px){
+  #footer > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  #footer > div > ul >li{display: inline-block;
+                      margin-right: 25px;}
+  #footer > div > ul a{color: #bdbdbd;}
+  #footer >address{color:#bdbdbd;font-size: 17px;padding: 30px 0 165px;}
+  #footer >address > span{
+    line-height: 1.6;
+  }
+  #footer > p.copyright{color: #c0c0c0;letter-spacing: normal;}
+  #footer > ul.sns{
+    display: flex;
+    position: absolute;
+    right: 131px;
+    bottom: 30px;
+  }
+  #footer > ul.sns > li{
+    margin-left: 10px;
+  }
+  #footer > ul.sns > li > a{
+    display: block;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px 1px rgba(0, 0, 0, 0.36), inset 0px 4px 10.8px 2.2px rgba(73, 73, 73, 0.11);
+    background-color: #1b1b1b;
+    text-indent: -9999px;
+    overflow: hidden;
+  }
+  #footer > ul.sns > li:first-child > a {
+    background: url(../images/footer_sns04.png) no-repeat center center;
+  }
+  #footer > ul.sns > li:nth-child(2) > a {background: url(../images/footer_sns03.png) no-repeat center center;}
+  #footer > ul.sns > li:nth-child(3) > a {background: url(../images/footer_sns02.png) no-repeat center center;}
+  #footer > ul.sns > li:nth-child(4) > a {background: url(../images/footer_sns01.png) no-repeat center center;}
+  
+  /* top 버튼 */
+  div.btn_bot{
+    position: fixed;
+    bottom: 58px;
+    right: 30px;
+  }
+  a.aside_btn{
+    display: block;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 55px;
+    font-weight: 500;
+    letter-spacing: normal;
+  }
+  a.shop{
+    background-color: #fff;
+    box-shadow: 0px 3px 8px 1px rgba(0, 0, 0, 0.06), inset 0px 5px 10px 0 rgba(255, 255, 255, 0.14);
+    margin-bottom: 5px;
+  }
+  a.top{
+    background: #000 url(../images/fix_arrow.png) no-repeat center center;
+    text-indent: -9999px;
+    overflow: hidden;
+  }
+  a.top.on{
+    transform: rotateZ(180deg);
+  }
+}
+
+/* mobile */
+@media (max-width:768px){
+  #footer > div{
+    display: flex;
+    flex-direction: column;
+    row-gap:45px ;
+    align-items: center;
+    }
+    
+    #footer > div > ul >li{display: inline-block;
+                      margin-right: 25px;}
+    #footer > div > ul a{color: #bdbdbd;}
+    #footer >address{color: #bdbdbd;font-size: 14px;
+      padding: 30px 0 60px;
+      text-align: center;}
+    #footer >address > span{
+    line-height: 1.6;
+    }
+    #footer > p.copyright{
+      color: #c0c0c0;
+      letter-spacing: normal;
+      font-size: 12px;
+      position: absolute;
+      right: 30px;
+      bottom: 30px;
+      /* margin-top: 40px; */
+    }
+    #footer > ul.sns{
+    display: flex;
+    justify-content: center;
+    }
+    #footer > ul.sns > li{
+    margin-left: 10px;
+    }
+    #footer > ul.sns > li > a{
+    display: block;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px 1px rgba(0, 0, 0, 0.36), inset 0px 4px 10.8px 2.2px rgba(73, 73, 73, 0.11);
+    background-color: #1b1b1b;
+    text-indent: -9999px;
+    overflow: hidden;
+    }
+    #footer > ul.sns > li:first-child > a {
+    background: url(../images/footer_sns04.png) no-repeat center center;
+    background-size: 17px;
+    }
+    #footer > ul.sns > li:nth-child(2) > a {background: url(../images/footer_sns03.png) no-repeat center center;  background-size: 26px;}
+    #footer > ul.sns > li:nth-child(3) > a {background: url(../images/footer_sns02.png) no-repeat center center;  background-size: 17px;}
+    #footer > ul.sns > li:nth-child(4) > a {background: url(../images/footer_sns01.png) no-repeat center center;  background-size: 17px;}
+    
+    /* top 버튼 */
+    div.btn_bot{
+    position: fixed;
+    bottom: 58px;
+    right: 30px;
+    }
+    a.aside_btn{
+    display: block;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 55px;
+    font-weight: 500;
+    letter-spacing: normal;
+    }
+    a.shop{
+    background-color: #fff;
+    box-shadow: 0px 3px 8px 1px rgba(0, 0, 0, 0.06), inset 0px 5px 10px 0 rgba(255, 255, 255, 0.14);
+    margin-bottom: 5px;
+    }
+    a.top{
+    background: #000 url(../images/fix_arrow.png) no-repeat center center;
+    text-indent: -9999px;
+    overflow: hidden;
+    }
+    a.top.on{
+    transform: rotateZ(180deg);
+    }
+      
+    
+}

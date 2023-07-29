@@ -1,0 +1,48 @@
+@import url(./reset.css);
+/* main css */
+
+/* fonts */
+
+/* poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+/* font-family: 'Poppins', sans-serif; */
+
+/* 빙그레체 */
+@font-face {
+  font-family: 'Binggrae';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Binggrae.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Binggrae-Two';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Binggrae-Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* common */
+body {
+  font-family: 'Poppins','Noto Sans KR', sans-serif;
+  font-size: 14px;
+  letter-spacing: -0.09em;
+  color: #1f1f1f;
+}
+body.on{position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+a, a:hover {
+  text-decoration: none;
+  color: #1f1f1f;
+}
+
+/* pc */
+@media (min-width:1025px) {
+
+
+  
+}

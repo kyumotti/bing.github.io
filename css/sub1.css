@@ -1,0 +1,435 @@
+@import url(reset.css);
+
+/* fonts */
+
+/* poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+/* font-family: 'Poppins', sans-serif; */
+
+/* 빙그레체 */
+@font-face {
+  font-family: 'Binggrae';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Binggrae.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Binggrae-Two';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Binggrae-Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* common */
+body {
+  font-family: 'Poppins','Noto Sans KR', sans-serif;
+  font-size: 14px;
+  letter-spacing: -0.09em;
+  color: #1f1f1f;
+}
+body.on{position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+a, a:hover {
+  text-decoration: none;
+  color: #1f1f1f;
+}
+
+/* pc */
+@media (min-width:1025px){
+/* layout */
+div.bg.on{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 40;
+  background: #fff url(../images/pc_ham_bg.png) no-repeat right 0;
+}
+div#wrap{
+  width: 100%;
+  position: relative;
+}
+  header#header{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 145px;
+    z-index: 50;
+    transition: all 0.2s ease;
+  }
+  /* header에 on을 붙히면 스크롤 100 이후 background가 생겨라  */
+  #header.on{
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.03); 
+  }
+    div.header_wrap{
+      width: 100%;
+      height: 145px;
+      transition: height 0.3s linear;
+      /* overflow: hidden; */
+    }
+      div.header_inner{
+        width: 100%;
+        height: 145px;
+      }
+        ul.topLink {
+          width: 100%;
+          height: 30px;
+          border-bottom: 1px solid #d4d4d4;
+          display: flex;
+          justify-content: end;
+          align-items: center;
+          padding: 0 80px;
+        }
+        div.header_bottom {
+          position: relative;
+          width: 100%;
+          padding: 0 80px;
+          height: 115px;
+          display: flex;
+          align-items: center;
+        }
+        /* 주메뉴를 호버했을 때 나오는 가상의 보더 */
+        div.header_bottom.on::after{
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 113px;
+          width: 100%;
+          height: 1px;
+          background-color: #c0c0c0;
+        }
+        main#container{
+          position: relative;
+          width: 100%;
+          margin-top: 145px;
+        }
+          div.container_inner{
+            width: 1310px;
+            margin: 0 auto 140px;
+          }
+          div.container_inner::after{
+            content: "";
+            display: block;
+            clear: both;
+          }
+            div.spot{
+              width: 100%;
+              margin-top: 60px;
+            }
+            div.finance_info{
+              width: 100%;
+            }
+        footer#footer{
+          position: relative;
+          width: 100%;
+          height: 387px;
+          padding: 40px 50px 30px;
+          background-color: #1b1b1b;
+      }      
+
+/* spot */
+div.spot > p.path{
+  opacity: 0.7;
+  font-weight: 500;
+  line-height:1.8;
+}
+div.spot > p.path> img{
+  vertical-align: 0;
+}
+div.spot > h2 {
+  margin-top: 28px;
+  font-size: 45px ;
+  font-family: 'Binggrae-Two';
+}
+div.spot>ul {
+  margin-top: 45px;
+  display: flex;
+  white-space: nowrap;
+}
+div.spot>ul>li{
+  display: inline-block;
+  border-radius: 30px;
+  margin-right: 8px;
+  min-width: 180px;
+  text-align: center;
+  background: rgba(121, 121, 121, 0.03);
+}
+div.spot>ul>li.active {
+  background: linear-gradient(to top, #ed1c24, #e0462e);
+}
+div.spot>ul>li.active>a{
+  color: #fff;
+}
+div.spot>ul>li>a{
+  display: block;
+  font-size: 16px;
+  line-height: 43px;
+}
+div.spot>ul>li:hover {
+  background: linear-gradient(to top, #ed1c24, #e0462e);
+}
+div.spot>ul>li:hover>a{
+  color: #fff;
+}
+
+/* 재무정보 */
+div.finance_info > h3 {
+  font-size: 32px;
+  font-family: 'Binggrae-Two';
+  margin: 95px auto 20px;
+  text-align: center;
+}
+div.finance_info> ul {
+  border-radius: 30px;
+  margin-bottom: 40px;
+  box-shadow: 0px 3px 7px 0 rgba(0, 0, 0, 0.05), inset 0px 5px 10px 0 rgba(121, 121, 121, 0.03);
+  position: relative;
+  left: 50%;
+  display: inline-flex;
+  transform: translateX(-50%);
+  justify-content: center;
+  text-align: center;
+}
+div.finance_info> ul>li {
+position: relative;
+line-height: 43px;
+width: 154px;
+}
+div.finance_info> ul>li>a{
+  display: block;
+}
+div.finance_info> ul>li:nth-of-type(2)::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 15px;
+  width: 1px;
+  background-color: #e5e5e5;;
+}
+div.finance_info > h4 {
+  font-size: 32px;
+  font-family: 'Binggrae-Two';
+  margin: 20px auto 20px;
+  text-align: center;
+}
+
+div.finance_info> div.finance_wrap {
+  position: relative;
+  width: 100%;
+  padding: 20px 10px;
+  background-color:  #f9f9f9;
+  border-radius: 30px;
+  display: flex;
+  margin-bottom: 145px;
+}
+div.finance_info> div.finance_wrap>span{
+  position: absolute;
+  right: 10px;
+  top:300px ;
+  font-size: 15px;
+  font-weight: bold;
+}
+div.finance_data{
+  flex: 1;
+  margin-right: 15px;
+}
+div.finance_data:nth-of-type(3) {
+  margin-right: 0;
+}
+div.finance_data>div {
+  border-radius: 30px;
+  padding: 35px 0 20px;
+  text-align: center;
+}
+div.finance_data:first-of-type>div{
+  background-color:#f3f6e0;
+}
+div.finance_data:nth-of-type(2)>div{background-color: #eff6fa;}
+div.finance_data:nth-of-type(3)>div{background-color:#fcf4e5;}
+div.finance_data>div>h5{
+  font-size: 16px;
+  padding-bottom: 5px;
+}
+div.finance_data>div>p{
+  font-size: 19px;
+  font-weight: 500;
+}
+div.finance_data>div>p>span:first-of-type{
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  margin-right: 10px;
+  text-indent: -9999px; 
+  overflow: hidden;
+}
+div.finance_data:first-of-type>div>p>span:first-of-type{
+  background: #fff url(../images/images_sub1/icon_finance01.png) no-repeat 50% 50%;
+}
+div.finance_data:nth-of-type(2)>div>p>span:first-of-type{
+  background: #fff url(../images/images_sub1/icon_finance02.png) no-repeat 50% 50%;
+}
+div.finance_data:nth-of-type(3)>div>p>span:first-of-type{
+  background: #fff url(../images/images_sub1/icon_finance03.png) no-repeat 50% 50%;
+}
+div.finance_data>div>p>span:nth-of-type(2){
+  font-size: 53px;
+  font-weight: 500
+}
+
+/* 그래프 */
+div.finance_data > ul {
+  position: relative;
+  margin-top: 150px;
+  background-color: #fff;
+  box-shadow: 0px 5px 24.3px 2.7px rgba(0, 0, 0, 0.09);
+  border-radius: 30px;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+}
+div.finance_data > ul::after{
+  content: "";
+  height: 1px;
+  width: 78%;
+  background-color: #e0e0e0;
+  position: absolute;
+  bottom:70px;
+}
+div.finance_data > ul>li{
+  position: relative;
+  width: 68px;
+  height: 100%;
+  /* display: flex;
+  flex-flow: column nowrap; */
+}
+div.finance_data > ul>li>span.figure{
+  display: block;
+  /* color: #880e12; */
+  color:#da3627;
+  width: 65px;
+  font-size: 15px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 18px;
+  box-shadow: 0px 3px 7px 0 rgba(0, 0, 0, 0.05);
+  margin-bottom: 15px;
+  letter-spacing: normal;
+}
+div.finance_data > ul>li>div.graph {
+  position: relative;
+  display: block;
+  border-radius: 30px 30px 0 0;
+  background-color: #e0e0e0;
+  width: 36px;
+  text-indent: -9999px;
+  overflow: hidden;
+  left: 23%;
+}
+div.finance_data > ul>li>div.graph_assets{
+  height: 83px
+}
+div.finance_data > ul>li>div.graph_capital{
+  height: 64px;
+}
+div.finance_data > ul>li:last-of-type>div.graph{
+  background-color: #da3627;
+}
+div.finance_data > ul>li>span.year{
+  display: block;
+  font-size: 16px;
+  line-height: 40px;
+  color:#1f1f1f;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-align: center;
+}
+.finance_wrap > .finance_data:nth-of-type(2) > ul{
+  padding-top: 90px;
+}
+.finance_wrap > .finance_data:nth-of-type(3) > ul {
+  padding-top: 50px;
+}
+
+/* 재무상태표 */
+.container_inner > h4{
+  font-size: 32px;
+  font-family: 'Binggrae-Two';
+  float: left;
+}
+.container_inner >span{
+  display: block;
+  padding: 20px;
+  float: right;
+  font-size: 15px;
+  font-weight: bold;
+}
+.container_inner >table.bs{
+  width: 100%;
+  border: 1px solid  #dfdfdf;
+  border-radius: 30px;
+  margin-top: 10px;
+  padding: 15px;
+}
+.container_inner >table.bs>thead > tr{
+  line-height: 30px;
+  background-color: #f9f9f9;
+}
+.container_inner >table.bs>thead > tr >th{ 
+  font-weight: 500;
+  line-height: 1.2;
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: none;
+}
+.container_inner >table.bs>thead > tr >th:first-child{
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.container_inner >table.bs>thead > tr >th:last-child{
+  border-top-right-radius:20px ;
+  border-bottom-right-radius:20px ;
+}
+.container_inner >table.bs th, .container_inner >table.bs td{
+  padding: 20px 0;
+  text-align: center;
+  border-bottom: 1px solid  #dfdfdf;
+  height: 80px;
+  letter-spacing: -0.8px;
+}
+.container_inner >table.bs tfoot > tr:nth-of-type(3) >th,.container_inner >table.bs tfoot > tr:nth-of-type(3) >td  {
+  border-bottom: none;
+}
+.container_inner >table.bs tfoot > tr > th,.container_inner >table.bs tfoot > tr > td {
+  font-weight: bold
+}
+
+.container_inner > p {
+  padding-top: 20px;
+  padding-left: 10px;
+  color:#757575;
+  line-height: 30px;
+  position: relative;
+}
+.container_inner > p::after{
+  content:"*";
+  color:#757575;
+  position: absolute;
+  left: 0;
+  top: 20px;
+}
+
+}

@@ -1,0 +1,509 @@
+/* pc */
+@media (min-width:1025px) {
+/* 탑링크 */
+ul.topLink > li {
+  margin-left: 20px;
+}
+ul.topLink > li > a{
+  display: block;
+  padding-right: 20px;
+  background: url(../images/link_arrow02.png) no-repeat 100% 50%;
+}
+
+/* 로고 */
+.logo{
+  min-width: 144px;
+}
+
+/* 주메뉴 호버시 header_wrap의 영역 내려오기*/
+.header_wrap.on {
+  height: 650px;
+  background-color: #fff;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+/* 햄버거 주메뉴 */
+nav.hamGnb {
+  display: none;
+}
+body.on > nav.hamGnb{
+  display: block;
+  position: absolute;
+  z-index: 45;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+}
+nav.hamGnb> ul{
+  display: flex;
+  justify-content: center;
+}
+nav.hamGnb> ul>li{
+  width: 225px;
+  border-radius: 30px;
+  border: solid 1px rgba(224, 223, 226, 0.6);
+  padding: 50px 30px;
+  margin-left: 10px;
+  transition: transform 0.4s ease-in-out;
+}
+nav.hamGnb> ul>li:first-of-type{margin-left:0}
+nav.hamGnb> ul>li>a{
+  display: block;
+  font-size: 20px;
+  font-family: 'Binggrae-Two';
+  padding-bottom: 20px;
+}
+nav.hamGnb> ul>li:hover{
+  transform: translateY(-10px);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+nav.hamGnb> ul>li:hover>a {
+  color: #e0462e;
+  transition: color 0.2s linear 0.15s;
+}
+nav.hamGnb> ul>li>ul> li{
+  line-height: 2;
+}
+nav.hamGnb> ul>li>ul>li>a{
+  transition: color 0.2s linear 0.15s;
+}
+nav.hamGnb> ul>li>ul> li:hover a{
+  color: #e0462e;
+}
+
+/* 주메뉴 */
+nav.gnb {
+  /* position: relative; */
+  margin: 0 auto;
+}
+nav.gnb.on {
+  visibility: hidden;
+}
+nav.gnb > ul {
+  display: flex;
+  width: 976px;
+  flex: 1;
+}
+nav.gnb > ul > li{
+  /* padding: 40px 0 41px 0; */
+  position: relative;
+  padding: 41px;
+  overflow: hidden;
+}
+nav.gnb > ul > li > a{
+  position: relative;
+  font-size: 20px;
+  font-weight: 400;
+  /* margin-right:80px; */
+  padding-bottom: 40px;
+}
+nav.gnb > ul > li > a:hover{
+  color: #e0462e;
+  transition: color 0.2s linear 0.15s;
+}
+nav.gnb > ul > li > a::before{
+  display: none;
+  content: "";
+  position: absolute;
+  height: 2px;
+  bottom: -2px;
+  width: 100%;
+  background-color: #e0462e;
+  z-index: 5;
+}
+nav.gnb > ul > li:hover > a::before {
+  display: block;
+}
+nav.gnb > ul > li> a::after {
+  display: none;
+  content: "";
+  position: absolute;
+  right: -10px;
+  top: 0;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #e0462e;
+}
+nav.gnb > ul > li:hover> a::after {
+  display: block;
+}
+/* 서브 메뉴 */
+nav.gnb > ul > li > ul {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  width: 100%;
+  top: 110px;
+  padding-top: 30px ;
+  /* transform: scaleY(0);
+  transform-origin: top; */
+  transition: opacity 0.4s linear 0.4s;
+}
+/* 주메뉴 호버시 서브메뉴 나오기  */
+nav.gnb > ul > li > ul.on{
+  opacity: 1;
+  visibility: visible;
+  /* transform: scaleY(1); */
+  /* display: block; */
+}
+nav.gnb > ul > li > ul > li{
+  line-height: 1.2;
+  margin-bottom:19px ;
+}
+nav.gnb > ul > li > ul > li > a{
+  letter-spacing: -0.04em;
+  font-size: 18px;
+  transition: color 0.2s linear 0.15s;
+}
+nav.gnb > ul > li > ul > li:hover > a {
+  color: #e0462e;
+}
+
+/* 언어설정 */
+div.language{
+  position: relative;
+  margin-right: 30px;
+  font-size: 16px;
+  font-weight: 700;
+}
+.language > span{
+  display: block;
+  padding-right: 17px;
+  cursor: pointer;
+  background: url(../images/lang_btn.png) no-repeat 100% 50%;
+}
+.language > ul{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 150%;
+  text-align: center;
+  background-color: #fff;
+  line-height: 1.9;
+  padding: 10px 0;
+  z-index: 30;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  transform: scaleY(0);
+  transform-origin: top;
+  opacity: 0;
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+/* span을 클릭하면 하위 메뉴들 나오기 */
+.language > ul.on{
+  transform: scaleY(1);
+  opacity: 1;
+}
+
+/* 햄버거 메뉴 */
+div.hamburger > a{
+  width: 26px;
+  height: 23px;
+  display: block;
+  background: url(../images/btn_menu.png) no-repeat 0 0 ;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+div.hamburger.on > a{
+  background: url(../images/ham_close.png) no-repeat 0 0;
+  background-size: contain;
+}
+  
+}
+
+/* tablet */
+@media (min-width:769px) and (max-width:1024px){
+
+/* 탑링크 */
+ul.topLink > li {
+  margin-left: 20px;
+}
+ul.topLink > li > a{
+  display: block;
+  padding-right: 20px;
+  background: url(../images/link_arrow02.png) no-repeat 100% 50%;
+}
+
+/* 로고 */
+/* 주메뉴 호버시 header_wrap의 영역 내려오기*/
+.header_wrap.on {
+  height: 650px;
+  background-color: #fff;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+h1.logo img{
+  height: 27px;
+}
+
+/* 햄버거 주메뉴 */
+nav.hamGnb {
+  display: none;
+}
+body.on > nav.hamGnb{
+  display: block;
+  position: absolute;
+  right: 0;
+  z-index: 45;
+  background-color: #fff;
+  width: 500px;
+  height: 100%;
+  border-top-left-radius: 30px;
+}
+nav.hamGnb> ul{
+  display: flex;
+  flex-direction: column;
+  padding: 100px 0 30px 0;
+}
+nav.hamGnb> ul>li>a{
+  display: block;
+  font-weight: 500;
+  font-size: 20px;
+  font-family: 'Binggrae-Two';
+  padding:11px 20px 11px 38px; ;
+  background:url(../images/m_ham_menu_btn.png) no-repeat 95% 50%;
+  background-size: 10px;
+}
+nav.hamGnb> ul>li.on > a{
+  background:url(../images/m_ham_menu_btn_up.png) no-repeat 95% 50%;
+  background-size: 10px;
+}
+/* 주메뉴에 on이 붙으면 해당 하위 메뉴 나오기 */
+nav.hamGnb> ul>li>ul{
+ background-color: #f7f7f7;
+ padding: 0 20px 0 38px; 
+ max-height: 0;
+ overflow: hidden;
+ transition: all 0.2s ease-in-out 0s;
+}
+nav.hamGnb> ul>li.on > ul{
+  /* display: block; */
+  max-height: 300px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+}
+nav.hamGnb> ul>li>ul>li>a{
+  display: block;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #707070;
+  transition: color 0.3s linear 0s;
+}
+nav.hamGnb> ul>li>ul> li:hover a{
+  color: #e0462e;
+}
+
+/* 주메뉴 */
+nav.gnb {
+  /* position: relative; */
+  margin: 0 auto;
+  display: none;
+}
+
+/* 언어설정 */
+div.language{
+  position: absolute;
+  right: 30px;
+  margin-right: 30px;
+  font-size: 16px;
+  font-weight: 700;
+}
+.language > span{
+  display: block;
+  padding-right: 17px;
+  cursor: pointer;
+  background: url(../images/lang_btn.png) no-repeat 100% 50%;
+}
+.language > ul{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 150%;
+  text-align: center;
+  background-color: #fff;
+  line-height: 1.9;
+  padding: 10px 0;
+  z-index: 30;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  transform: scaleY(0);
+  transform-origin: top;
+  opacity: 0;
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+/* span을 클릭하면 하위 메뉴들 나오기 */
+.language > ul.on{
+  transform: scaleY(1);
+  opacity: 1;
+}
+
+/* 햄버거 메뉴 */
+div.hamburger {
+  position: absolute;
+  right: 0;
+}
+div.hamburger > a{
+  width: 26px;
+  height: 23px;
+  display: block;
+  background: url(../images/btn_menu.png) no-repeat 0 0 ;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+div.hamburger.on > a{
+  background: url(../images/ham_close.png) no-repeat 0 0;
+  background-size: contain;
+}
+}
+
+/* mobile */
+@media (max-width:768px){
+  /* 탑링크 */
+  ul.topLink > li {
+    margin-left: 20px;
+  }
+  ul.topLink > li > a{
+    display: block;
+    padding-right: 20px;
+    background: url(../images/link_arrow02.png) no-repeat 100% 50%;
+  }
+  
+  /* 로고 */
+  /* 주메뉴 호버시 header_wrap의 영역 내려오기*/
+  .header_wrap.on {
+    height: 650px;
+    background-color: #fff;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  }
+  h1.logo img{
+    height: 27px;
+  }
+  
+  /* 햄버거 주메뉴 */
+  nav.hamGnb {
+    display: none;
+  }
+  body.on > nav.hamGnb{
+    display: block;
+    /* opacity: 1; */
+    position: absolute;
+    right: 0;
+    z-index: 45;
+    background-color: #fff;
+    width: 500px;
+    height: 100%;
+    border-top-left-radius: 30px;
+  }
+  nav.hamGnb> ul{
+    display: flex;
+    flex-direction: column;
+    padding: 100px 0 30px 0;
+  }
+  nav.hamGnb> ul>li>a{
+    display: block;
+    font-weight: 500;
+    font-size: 20px;
+    font-family: 'Binggrae-Two';
+    padding:11px 20px 11px 38px; ;
+    background:url(../images/m_ham_menu_btn.png) no-repeat 95% 50%;
+    background-size: 10px;
+  }
+  nav.hamGnb> ul>li.on > a{
+    background:url(../images/m_ham_menu_btn_up.png) no-repeat 95% 50%;
+    background-size: 10px;
+  }
+  /* 주메뉴에 on이 붙으면 해당 하위 메뉴 나오기 */
+  nav.hamGnb> ul>li>ul{
+  /* display: none; */
+   background-color: #f7f7f7;
+   padding: 0 20px 0 38px; 
+   max-height: 0;
+   overflow: hidden;
+   transition: all 0.2s ease-in-out 0s;
+  }
+  nav.hamGnb> ul>li.on > ul{
+    /* display: block; */
+    max-height: 300px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+  }
+  nav.hamGnb> ul>li>ul>li>a{
+    display: block;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #707070;
+    transition: color 0.3s linear 0s;
+  }
+  nav.hamGnb> ul>li>ul> li:hover a{
+    color: #e0462e;
+  }
+  
+  /* 주메뉴 */
+  nav.gnb {
+    /* position: relative; */
+    margin: 0 auto;
+    display: none;
+  }
+  
+  /* 언어설정 */
+  div.language{
+    position: absolute;
+    right: 30px;
+    margin-right: 30px;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  .language > span{
+    display: block;
+    padding-right: 17px;
+    cursor: pointer;
+    background: url(../images/lang_btn.png) no-repeat 100% 50%;
+  }
+  .language > ul{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 150%;
+    text-align: center;
+    background-color: #fff;
+    line-height: 1.9;
+    padding: 10px 0;
+    z-index: 30;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    transform: scaleY(0);
+    transform-origin: top;
+    opacity: 0;
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  }
+  /* span을 클릭하면 하위 메뉴들 나오기 */
+  .language > ul.on{
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  
+  /* 햄버거 메뉴 */
+  div.hamburger {
+    position: absolute;
+    right: 0;
+  }
+  div.hamburger > a{
+    width: 26px;
+    height: 23px;
+    display: block;
+    background: url(../images/btn_menu.png) no-repeat 0 0 ;
+    text-indent: -9999px;
+    overflow: hidden;
+  }
+  div.hamburger.on > a{
+    background: url(../images/ham_close.png) no-repeat 0 0;
+    background-size: contain;
+  }
+
+
+}
